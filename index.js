@@ -128,4 +128,11 @@ client.on('guildMemberAdd', async member => {
 
           
 
-
+const { joinVoiceChannel } = require('@discordjs/voice');
+ client.on('ready', () => { 
+  joinVoiceChannel({
+channelId: config.girilecekseskanalı,
+guildId: config.sunucuid,       
+adapterCreator: client.guilds.cache.get(config.sunucuid).voiceAdapterCreator
+    });
+});
