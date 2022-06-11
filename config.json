@@ -1,0 +1,24 @@
+{
+    "token": "TOKEN",  
+    "prefix": "PREFİX",
+    "durum": "BOT DURUMUNDA NE YAZACAK",
+    "status": "idle/online/dnd",
+  
+    "sunucuid": "SUNUCUNUZUN İDSİ",
+    "girilecekseskanalı": "GİRİLECEK SES KANALI",
+
+    "tag": "•",
+
+    "isimyaş": "İsim | Yaş",
+    "kayıtkanalı": "KAYIT KANALI İD",
+    "kayıtyt": "KAYIT YETKİLİSİNİN ROL İD",
+    "kayıtsız": "KAYITSIZ ROL İD",
+    "erkek": "ERKEK ROL İD",
+    "kız": "KIZ ROL İD",
+    "logisim": "REGİSTER LOG KANALININ İSMİ",
+    "kurallar": "KURALLAR KANALI İD",
+  
+    "yaşsınırı": "YAŞ SINIRI",
+
+    "embedcolor": "RANDOM"
+}
