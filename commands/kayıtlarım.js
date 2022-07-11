@@ -8,12 +8,7 @@ module.exports = {
     aliases: [ "profilim" ],
     async run(client, message, args){
   
-if (!message.member.roles.cache.has(config.kayıtyt) && !message.member.permissions.has("ADMINISTRATOR")) return message.reply("Yetkiniz Yeterli Değil")
-
-db.add(`erkek.${message.author.id}`, 1)
-db.add(`toplam.${message.author.id}`, 1)
-db.add(`erkek`, 1)            
-db.add(`toplam`, 1)   
+if (!message.member.roles.cache.has(config.kayıtyt) && !message.member.permissions.has("ADMINISTRATOR")) return message.reply("Yetkiniz Yeterli Değil") 
 
 const erkek = db.get(`erkek.${message.author.id}`) || "0"
 const kız = db.get(`kız.${message.author.id}`) || "0"
@@ -21,7 +16,7 @@ const toplam = db.get(`toplam.${message.author.id}`) || "0"
  
 let kayıtlarım = new MessageEmbed()
 .setColor(config.embedcolor)
-.setDescription(`**Bir Üye ERKEK Olarak Kaydedildi!**
+.setDescription(`**Toplam Kayıt Listeniz**
 
 **Toplam:** ${toplam}
 **Erkek:** ${erkek}
