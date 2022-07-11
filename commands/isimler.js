@@ -11,7 +11,7 @@ if (!message.member.roles.cache.has(config.kayıtyt) && !message.member.permissi
 
 let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 if(!member) return message.channel.send("Lütfen Bir Kullanıcı Etiketleyin.")
-let isimler = db.get(`isimler.${member.id}`) || "Bu Üyenin İsim Verisi Yok!"
+let isimler = db.get(`isimler.${member.id}`) || ["Bu üyenin isim verisi yok"]
 
 
 
