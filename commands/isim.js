@@ -20,8 +20,7 @@ if (!member || !Age || !Name) return message.reply({ embeds: [embed.setDescripti
 if (!Age || isNaN(Age)) return message.reply({ embeds: [embed.setDescription("Geçerli Bir Yaş Belirleyin!")] }).then(msg => {setTimeout(() => msg.delete(), 5000);});
 if (Name.lenght > 12) return message.reply(`Uzunluk 12 den Fazla Olamaz!`).then(msg => {setTimeout(() => msg.delete(), 5000);});
 if (member.roles.highest.position >= message.member.roles.highest.position) return message.reply({ embeds: [embed.setDescription(`Bu Kullanıcı Senden Üstte/Aynı Permde.`)] }).then(msg => {setTimeout(() => msg.delete(), 5000);});
-let isimler = db.get(`isimler.${member.id}`) || "Bu Üyenin İsim Verisi Yok!"
-
+let isimler = db.get(`isimler.${member.id}`) || ["Bu üyenin isim verisi yok"]
 var i = 1
 let embedgenel = new MessageEmbed()
 .setColor(config.embedcolor)
