@@ -23,7 +23,7 @@ if (Name.lenght > 12) return message.reply(`Uzunluk 12 den Fazla Olamaz!`).then(
 if (Age < config.yaşsınırı) return message.reply(`${config.yaşsınırı} yaş altı kullanıcı kayıt edilemez!`).then(msg => {setTimeout(() => msg.delete(), 5000);});
 if (member.roles.cache.get(config.erkek) || member.roles.cache.get(config.kadın)) return message.reply({ embeds: [embed.setDescription(`Kayıtlı Kullanıcıyı Tekrar Kayıt Edemezsin.`)] }).then(msg => {setTimeout(() => msg.delete(), 5000);});
 if (member.roles.highest.position >= message.member.roles.highest.position) return message.reply({ embeds: [embed.setDescription(`Bu Kullanıcı Senden Üstte/Aynı Permde.`)] }).then(msg => {setTimeout(() => msg.delete(), 5000);});
-    let isimler = db.get(`isimler.${member.id}`) || "Bu Üyenin İsim Verisi Yok!"
+let isimler = db.get(`isimler.${member.id}`) || ["Bu üyenin isim verisi yok"]
 
 var i = 1
 let embedgenel = new MessageEmbed()
